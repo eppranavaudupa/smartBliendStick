@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Alert System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    main {
+      padding: 20px;
+    }
+    h2 {
+      color: #007bff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #007bff;
+      color: white;
+    }
+    .fall {
+      background: #ffe5e5;
+      color: #b30000;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header> Alert System</header>
+  <main>
+    <h2>Recent Events</h2>
+    <table id="eventTable">
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Event</th>
+          <th>Time</th>
+          <th>Angle</th>
+          <th>Distance (cm)</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <footer>© 2025 Alert System</footer>
+
+  <script>
+    const tableBody = document.querySelector('#eventTable tbody');
+
+    async function fetchEvents() {
+      try {
+        const res = await fetch('/events');
+        const events = await res.json();
+
+        tableBody.innerHTML = ''; // clear old
+        events.slice().reverse().forEach(ev => {
+          const row = document.createElement('tr');
+          if (ev.event && ev.event.toLowerCase() === 'fall') row.classList.add('fall');
+          
+          const mapLink = ev.latitude && ev.longitude 
+            ? `<a href="https://www.google.com/maps?q=${ev.latitude},${ev.longitude}" target="_blank">View</a>` 
+            : 'N/A';
+          
+          row.innerHTML = `
+            <td>${ev.deviceId || '-'}</td>
+            <td>${ev.event || '-'}</td>
+            <td>${new Date(ev.timestamp || ev.receivedAt).toLocaleString()}</td>
+            <td>${ev.angle || '-'}</td>
+            <td>${ev.distance_cm || '-'}</td>
+            <td>${mapLink}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      } catch (err) {
+        console.error('Failed to fetch events:', err);
+      }
+    }
+
+    // Refresh every 5 seconds
+    fetchEvents();
+    setInterval(fetchEvents, 5000);
+  </script>
+</body>
+</html>
