@@ -1,5 +1,6 @@
 // server.js
 const express = require('express');
+require('dotenv').config();
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -17,10 +18,10 @@ const SERVER_LAT = process.env.SERVER_LAT || 13.2180;
 const SERVER_LNG = process.env.SERVER_LNG || 75.0060;
 
 // Twilio Config
-const TWILIO_SID = process.env.TWILIO_SID ||"AC2046457183bee3d11d81a3fb100b5b92";
-const TWILIO_TOKEN = process.env.TWILIO_TOKEN||"0cda30957c843ba09e1209e51951acc2" ;
-const TWILIO_FROM = process.env.TWILIO_FROM ||"+12174396151";
-const ALERT_TO = process.env.ALERT_TO ||"+919902931601";
+const TWILIO_SID = process.env.TWILIO_SID ;
+const TWILIO_TOKEN = process.env.TWILIO_TOKEN ;
+const TWILIO_FROM = process.env.TWILIO_FROM ;
+const ALERT_TO = process.env.ALERT_TO ;
 
 let twilioClient = null;
 if (TWILIO_SID && TWILIO_TOKEN) {
