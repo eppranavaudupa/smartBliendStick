@@ -72,22 +72,44 @@
   <footer>© 2025 Alert System</footer>
 
   <script>
+    // Redirect if not logged in
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = 'login.html';
+    }
+  
     const tableBody = document.querySelector('#eventTable tbody');
-
+  
     async function fetchEvents() {
       try {
-        const res = await fetch('/events');
+        const res = await fetch('/events', {
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
+        });
+  
+        if (!res.ok) {
+          console.error('Failed to fetch events:', res.status);
+          if (res.status === 401) {
+            alert('Session expired. Please log in again.');
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+          }
+          return;
+        }
+  
         const events = await res.json();
-
-        tableBody.innerHTML = ''; // clear old
+        tableBody.innerHTML = ''; // Clear old data
+  
+        // Display events (latest first)
         events.slice().reverse().forEach(ev => {
           const row = document.createElement('tr');
           if (ev.event && ev.event.toLowerCase() === 'fall') row.classList.add('fall');
-          
-          const mapLink = ev.latitude && ev.longitude 
-            ? `<a href="https://www.google.com/maps?q=${ev.latitude},${ev.longitude}" target="_blank">View</a>` 
+  
+          const mapLink = ev.latitude && ev.longitude
+            ? `<a href="https://www.google.com/maps?q=${ev.latitude},${ev.longitude}" target="_blank">View</a>`
             : 'N/A';
-          
+  
           row.innerHTML = `
             <td>${ev.deviceId || '-'}</td>
             <td>${ev.event || '-'}</td>
@@ -98,14 +120,16 @@
           `;
           tableBody.appendChild(row);
         });
+  
       } catch (err) {
-        console.error('Failed to fetch events:', err);
+        console.error('Error fetching events:', err);
       }
     }
-
-    // Refresh every 5 seconds
+  
+    // Initial load + periodic refresh
     fetchEvents();
     setInterval(fetchEvents, 5000);
   </script>
+  
 </body>
 </html>

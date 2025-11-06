@@ -2,109 +2,10 @@
   {
     "deviceId": "stick-001",
     "event": "fall",
-    "timestamp": "2025-11-05T08:23:57Z",
-    "angle": 29.73,
-    "distance_cm": 60.21,
-    "receivedAt": "2025-11-05T08:23:58.124Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "1970-01-01T00:00:13Z",
-    "angle": 33.27,
-    "distance_cm": 37.35,
-    "receivedAt": "2025-11-05T08:25:53.436Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T08:26:57Z",
-    "angle": 39.35,
-    "distance_cm": 71.05,
-    "receivedAt": "2025-11-05T08:26:59.070Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T08:27:14Z",
-    "angle": 35.35,
-    "distance_cm": 63.01,
-    "receivedAt": "2025-11-05T08:27:15.290Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T16:49:58Z",
-    "angle": 29.59,
-    "distance_cm": 218.95,
-    "receivedAt": "2025-11-05T16:49:59.799Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T17:55:05Z",
-    "angle": 14.2,
-    "distance_cm": 166.51,
-    "receivedAt": "2025-11-05T17:55:06.281Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "1970-01-01T00:00:11Z",
-    "angle": 7.84,
-    "distance_cm": 8.87,
-    "receivedAt": "2025-11-05T18:03:33.637Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "1970-01-01T00:00:34Z",
-    "angle": 33.87,
-    "distance_cm": 168.21,
-    "receivedAt": "2025-11-05T18:03:56.708Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T18:07:39Z",
-    "angle": 21.15,
-    "distance_cm": 168.68,
-    "receivedAt": "2025-11-05T18:07:40.568Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T18:07:58Z",
-    "angle": 39.88,
-    "distance_cm": 57.92,
-    "receivedAt": "2025-11-05T18:07:58.488Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T18:18:35Z",
-    "angle": 20.59,
-    "distance_cm": 169.76,
-    "receivedAt": "2025-11-05T18:18:36.183Z",
-    "locationSource": "unknown"
-  },
-  {
-    "deviceId": "stick-001",
-    "event": "fall",
-    "timestamp": "2025-11-05T18:24:29Z",
-    "angle": 16.92,
-    "distance_cm": 170.21,
-    "receivedAt": "2025-11-05T18:24:30.214Z",
+    "timestamp": "2025-11-06T17:04:29Z",
+    "angle": 35.02,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:04:30.761Z",
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"
@@ -112,10 +13,10 @@
   {
     "deviceId": "stick-001",
     "event": "fall",
-    "timestamp": "2025-11-05T18:25:08Z",
-    "angle": 15.17,
-    "distance_cm": 57.9,
-    "receivedAt": "2025-11-05T18:25:09.004Z",
+    "timestamp": "2025-11-06T17:05:50Z",
+    "angle": 38.77,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:05:50.380Z",
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"
@@ -123,10 +24,10 @@
   {
     "deviceId": "stick-001",
     "event": "fall",
-    "timestamp": "2025-11-05T18:26:19Z",
-    "angle": 9.68,
-    "distance_cm": 63.28,
-    "receivedAt": "2025-11-05T18:26:20.293Z",
+    "timestamp": "2025-11-06T17:15:30Z",
+    "angle": 34.22,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:15:31.352Z",
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"
@@ -134,10 +35,10 @@
   {
     "deviceId": "stick-001",
     "event": "fall",
-    "timestamp": "2025-11-05T18:33:25Z",
-    "angle": 21.4,
-    "distance_cm": 69.66,
-    "receivedAt": "2025-11-05T18:33:26.412Z",
+    "timestamp": "2025-11-06T17:18:04Z",
+    "angle": 36.13,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:18:04.938Z",
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"
@@ -145,10 +46,21 @@
   {
     "deviceId": "stick-001",
     "event": "fall",
-    "timestamp": "2025-11-05T18:34:03Z",
-    "angle": 28.95,
-    "distance_cm": 69.35,
-    "receivedAt": "2025-11-05T18:34:03.844Z",
+    "timestamp": "2025-11-06T17:18:12Z",
+    "angle": 11.5,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:18:13.046Z",
+    "latitude": 13.218,
+    "longitude": 75.006,
+    "locationSource": "server-default"
+  },
+  {
+    "deviceId": "stick-001",
+    "event": "fall",
+    "timestamp": "2025-11-06T17:27:25Z",
+    "angle": 27.99,
+    "distance_cm": -1,
+    "receivedAt": "2025-11-06T17:27:26.779Z",
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"

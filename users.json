@@ -1,0 +1,12 @@
+[
+  {
+    "name": "rakesh",
+    "email": "rakesh.com",
+    "password": "$2b$10$V1BQ9FAP91EjADBOD8v.duETN1k/kyvPrcjRryeg5LWxsmQOtjVQW"
+  },
+  {
+    "name": "test",
+    "email": "test@gmail.com",
+    "password": "$2b$10$JVDAly4aBkTmgD78qjWZAeLm3WJ0YeAfv0axLCnxGwNP5Djt0.zkq"
+  }
+]
