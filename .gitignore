@@ -3,11 +3,8 @@ node_modules/
 
 # Environment variables
 .env
-
 # Logs
 *.log
-
-# System files
 .DS_Store
 events.json
 users.json
