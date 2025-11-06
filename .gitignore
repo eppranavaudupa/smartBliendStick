@@ -9,3 +9,5 @@ node_modules/
 
 # System files
 .DS_Store
+events.json
+users.json
