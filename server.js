@@ -14,8 +14,8 @@ const server = http.createServer(app);
 // ---------- Configuration ----------
 const PORT = process.env.PORT || 3000;
 const API_KEY = process.env.API_KEY || "";
-const SERVER_LAT = process.env.SERVER_LAT || 13.2180;
-const SERVER_LNG = process.env.SERVER_LNG || 75.0060;
+const SERVER_LAT = process.env.SERVER_LAT ;
+const SERVER_LNG = process.env.SERVER_LNG ;
 
 // Twilio Config
 const TWILIO_SID = process.env.TWILIO_SID ;

@@ -86,5 +86,16 @@
     "latitude": 13.218,
     "longitude": 75.006,
     "locationSource": "server-default"
+  },
+  {
+    "deviceId": "stick-001",
+    "event": "fall",
+    "timestamp": "2025-11-06T17:41:33Z",
+    "angle": 36.9,
+    "distance_cm": 167.32,
+    "receivedAt": "2025-11-06T17:41:34.001Z",
+    "latitude": 13.218,
+    "longitude": 75.006,
+    "locationSource": "server-default"
   }
 ]
